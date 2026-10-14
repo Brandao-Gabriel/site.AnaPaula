@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Ana Paula Brandão | Odontologia</title>
+    <meta name="description" content="Dra. Ana Paula Brandão | Odontologia estética e restauradora em Vila Clementino, São Paulo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-inner">
+            <div class="topo-perfil">
+                <img src="https://images.pexels.com/photos/5355860/pexels-photo-5355860.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=200" alt="Foto da Doutora Ana Paula">
+                <div>
+                    <h1>Dra. Ana Paula Brandão</h1>
+                    <p>Seu sorriso em boas mãos</p>
+                </div>
+            </div>
+            <button class="btn-w" onclick="abrirModal()"><i class="fa-brands fa-whatsapp"></i> Agendar consulta</button>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <a href="#hero">Início</a>
+        <a href="#sobre-doutora">Sobre</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#faq">Perguntas</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="wrap">
+            <h2>Sorrisos Naturais e Saudáveis</h2>
+            <p class="hero-subtitle">Tratamentos personalizados com tecnologia e cuidado humano.</p>
+            <img src="https://images.pexels.com/photos/32852531/pexels-photo-32852531.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=520&w=1100" alt="Imagem do consultório">
+            <div class="hero-acoes">
+                <button class="btn-gold" onclick="abrirModal()">🦷 Agendar meu tratamento</button>
+                <a class="btn-outline" href="#tratamentos">Ver tratamentos</a>
+            </div>
+            <div class="hero-nota">
+                <span>⭐ <b>4,9</b> · <a class="lm" href="#" target="_blank">96 avaliações no Google</a></span>
+                <span>✅ Primeira avaliação com orientação completa</span>
+            </div>
+            <a class="hero-end lm" href="#" target="_blank">📍 <span class="txt-endereco"></span></a>
+        </div>
+    </section>
+
+    <section class="z1" id="sobre-doutora">
+        <div class="wrap">
+            <h2 class="titulo">Sobre a Doutora</h2>
+            <hr class="linha">
+            <div class="sobre-grid">
+                <img src="https://images.pexels.com/photos/5355860/pexels-photo-5355860.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=760&w=580" alt="Foto da Doutora">
+                <div>
+                    <p>A Doutora Ana Paula é especializada em odontologia estética e restauradora, com mais de 15 anos de experiência. Formada pela USP, dedica-se a proporcionar tratamentos modernos e personalizados.</p>
+                    <p>Seu consultório une tecnologia, conforto e atendimento humanizado, garantindo experiências positivas e resultados naturais.</p>
+                    <div class="checado"><span class="bola">✓</span> Mais de 15 anos de experiência em odontologia estética e restauradora</div>
+                    <div class="checado"><span class="bola">✓</span> Formada pela USP, com atualização constante</div>
+                    <div class="checado"><span class="bola">✓</span> Consultório com tecnologia, conforto e atendimento humanizado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="z2" id="tratamentos">
+        <div class="wrap">
+            <h2 class="titulo">Nossos Tratamentos</h2>
+            <hr class="linha">
+            <p class="sub">Escolha o tratamento desejado e o WhatsApp da Dra. Ana Paula abre com a sua mensagem pronta — com o seu nome e a pergunta sobre o horário disponível.</p>
+            <div id="listaTratamentos" class="lista-tratamentos"></div>
+        </div>
+    </section>
+
+    <section class="z2" id="avaliacoes">
+        <div class="wrap">
+            <h2 class="titulo">O que nossos pacientes dizem</h2>
+            <hr class="linha">
+            <p class="sub">Avaliações publicadas no perfil da clínica no Google, exatamente como aparecem para quem pesquisa.</p>
+            <div class="resumo">
+                <div class="resumo-nota">
+                    <strong>4,9</strong>
+                    <div class="estrelas nota-grande">★★★★★</div>
+                    <small>96 avaliações</small>
+                </div>
+                <div class="barras" id="barras"></div>
+            </div>
+            <div class="trilho" id="trilho"></div>
+            <div class="setas">
+                <button class="seta" onclick="rolar(-1)" aria-label="Anteriores">←</button>
+                <button class="seta" onclick="rolar(1)" aria-label="Próximas">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="z1 galeria" id="galeria">
+        <div class="wrap">
+            <h2 class="titulo">Galeria</h2>
+            <hr class="linha">
+            <div id="paginas" class="paginas-galeria"></div>
+            <div class="galeria-nav">
+                <button class="seta" onclick="trocarPagina(-1)" aria-label="Fotos anteriores">←</button>
+                <div class="pontos" id="pontos"></div>
+                <button class="seta" onclick="trocarPagina(1)" aria-label="Próximas fotos">→</button>
+            </div>
+        </div>
+    </section>
+    <div id="zoom" onclick="fecharZoom()"><img id="zoomImg" src="" alt="Foto ampliada do consultório"></div>
+
+    <section class="z2 faq" id="faq">
+        <div class="wrap faq-wrap">
+            <h2 class="titulo">Perguntas Frequentes</h2>
+            <hr class="linha">
+            <div id="listaFaq" class="lista-faq"></div>
+        </div>
+    </section>
+
+    <section class="z1" id="contato">
+        <div class="wrap">
+            <h2 class="titulo">Onde Estamos</h2>
+            <hr class="linha">
+            <p class="sub">Sem formulários: escolha seu tratamento no site e fale direto com a Dra. pelo WhatsApp, ou escreva um e-mail com um toque.</p>
+            <div class="contato-grid">
+                <div class="card">
+                    <h3>Endereço</h3>
+                    <p class="endereco-texto"><a class="lm" href="#" target="_blank"><span class="txt-endereco"></span></a></p>
+                    <div class="contatos">
+                        <a class="contato-item" id="linkEmail" href="#">
+                            <span class="ico">✉️</span>
+                            <span><small>E-mail · clique para escrever</small><b>brandao.anapaula@gmail.com</b></span>
+                        </a>
+                        <a class="contato-item lm-wpp" href="#" target="_blank">
+                            <span class="ico"><i class="fa-brands fa-whatsapp" style="color:#25d366;font-size:22px"></i></span>
+                            <span><small>WhatsApp</small><b>(11) 94266-3418</b></span>
+                        </a>
+                        <a class="contato-item" href="tel:+5511942663418">
+                            <span class="ico">📞</span>
+                            <span><small>Telefone</small><b>(11) 94266-3418</b></span>
+                        </a>
+                        <div class="contato-item">
+                            <span class="ico">🕐</span>
+                            <span><small>Funcionamento</small><b>Seg a Sex 9h-18h · Sáb 9h-14h</b></span>
+                        </div>
+                    </div>
+                    <div class="hero-acoes contato-acoes">
+                        <a class="btn-gold" id="linkRota" href="#" target="_blank">📍 Como chegar</a>
+                        <button class="btn-w" onclick="abrirModal()"><i class="fa-brands fa-whatsapp"></i> Agendar tratamento</button>
+                    </div>
+                </div>
+                <div class="card-azul">
+                    <h3>Funcionamento</h3>
+                    <ul>
+                        <li><span>Segunda a sexta</span><b>9h às 18h</b></li>
+                        <li><span>Sábado</span><b>9h às 14h</b></li>
+                        <li><span>Domingo</span><b>Fechado</b></li>
+                    </ul>
+                    <p>Atendimento com hora marcada. Envie sua mensagem pelo WhatsApp que encontramos o melhor horário para você. 🦷</p>
+                </div>
+            </div>
+            <div class="mapa-topo">
+                <span>📍 Brandão Odontologia · Vila Clementino</span>
+                <a class="lm" href="#" target="_blank">Ver mapa ampliado →</a>
+            </div>
+            <iframe id="mapa" title="Mapa do consultório" loading="lazy" allowfullscreen></iframe>
+            <div class="mapa-notas">
+                <span>Próximo ao metrô</span>
+                <span>Estacionamento conveniado na rua</span>
+                <span>Acesso para cadeirantes</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <h4>Brandão Odontologia</h4>
+                    <p class="rodape-descricao">Seu sorriso em boas mãos. Atendimento humanizado em odontologia estética e restauradora, na Vila Clementino, São Paulo.</p>
+                    <p>⭐ 4,9 · 96 avaliações no Google</p>
+                </div>
+                <div>
+                    <h4>Navegue</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#sobre-doutora">Sobre</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#faq">Perguntas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Serviços</h4>
+                    <ul id="footServicos"></ul>
+                </div>
+            </div>
+            <p class="copy">© <span id="ano"></span> Brandão Odontologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="btn-w fab" onclick="abrirModal()" aria-label="Agendar pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i> <span>Agendar pelo WhatsApp</span>
+    </button>
+
+    <div class="fundo-modal" id="fundoModal">
+        <div class="modal">
+            <div class="modal-topo">
+                <button class="fechar" onclick="fecharModal()" aria-label="Fechar">✕</button>
+                <small>AGENDAMENTO DIRETO</small>
+                <h3>Vamos cuidar do seu sorriso 😁</h3>
+                <p>Diga seu nome e escolha o tratamento: o WhatsApp da Dra. Ana Paula abre com a mensagem pronta, perguntando se o horário está disponível.</p>
+            </div>
+            <div class="modal-corpo">
+                <label for="nomePaciente">Seu nome</label>
+                <input type="text" id="nomePaciente" placeholder="Ex.: Maria">
+                <label>Qual tratamento você deseja?</label>
+                <div class="chips" id="chips"></div>
+                <label>Melhor período para você</label>
+                <div class="chips" id="periodos"></div>
+                <div class="preview">
+                    <div class="preview-header"><i class="fa-brands fa-whatsapp" style="color:#25d366"></i> Pré-visualização da mensagem</div>
+                    <div class="preview-msg">
+                        <div class="bolha" id="bolha"></div>
+                    </div>
+                </div>
+                <a class="btn-w enviar" id="botaoEnviar" href="#" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar no WhatsApp da Dra. Ana Paula
+                </a>
+                <p class="aviso">A conversa abre no seu aplicativo do WhatsApp com o texto já escrito — você pode editar antes de enviar. Este site não armazena nenhum dado.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
